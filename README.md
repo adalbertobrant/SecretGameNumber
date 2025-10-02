@@ -34,6 +34,8 @@ Para garantir uma experiência positiva e organizada para todos, por favor, siga
 7.  **Aguarde a Revisão:**
     * Um mantenedor irá revisar seu PR. Pode ser que peçam algumas alterações.
     * Após a aprovação, seu PR será mesclado ao projeto principal. Parabéns pela sua contribuição!
+    * Lembre-se de dar uma estrela para o repo e divulgar o mesmo.
+    * Lembre-se são apenas 10k swags então faça logo o seu PR's.
 
 ## 🛠️ Como Rodar o Projeto Localmente
 
