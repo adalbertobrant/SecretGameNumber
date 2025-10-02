@@ -18,24 +18,36 @@
     <div class="container">
         <div class="container__conteudo">
             <div class="container__informacoes">
+                <select id="select-idioma" class="container__select-idioma" onchange="mudarIdioma(this.value)">
+                    <option value="pt-BR">🇧🇷 Português</option>
+                    <option value="en-US">🇺🇸 English</option>
+                </select>
+
                 <div class="container__texto">
                     <h1></h1>
                     <p class="texto__paragrafo"></p>
                 </div>
                 <input type="number" min="1" max="10" class="container__input">
                 <div class="chute container__botoes">
-                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
-                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                    <button onclick="verificarChute()" id="btn-chutar" class="container__botao"></button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled></button>
                 </div>
             </div>
             <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
         </div>
     </div>
 
-
-
-
+    <script src="locale.js" defer></script>
     <script src="app.js" defer></script>
+
+    <script>
+        function mudarIdioma(novoIdioma) {
+            idiomaAtual = novoIdioma;
+            localStorage.setItem('idioma', novoIdioma);
+            exibirMensagemInicial();
+        }
+    </script>
+
 </body>
 
 </html>
