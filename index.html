@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>JS Game</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="container__conteudo">
-            <div class="container__informacoes">
-                <select id="select-idioma" class="container__select-idioma" onchange="mudarIdioma(this.value)">
-                    <option value="pt-BR">🇧🇷 Português</option>
-                    <option value="en-US">🇺🇸 English</option>
-                </select>
+      <div class="container__conteudo">
+        <div class="container__informacoes">
+          <select
+            id="select-idioma"
+            class="container__select-idioma"
+            onchange="mudarIdioma(this.value)"
+          >
+            <option value="pt-BR">🇧🇷 Português</option>
+            <option value="en-US">🇺🇸 English</option>
+          </select>
 
-                <div class="container__texto">
-                    <h1></h1>
-                    <p class="texto__paragrafo"></p>
-                </div>
-                <input type="number" min="1" max="10" class="container__input">
-                <div class="chute container__botoes">
-                    <button onclick="verificarChute()" id="btn-chutar" class="container__botao"></button>
-                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled></button>
-                </div>
-            </div>
-            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+          <div class="container__texto">
+            <h1></h1>
+            <p class="texto__paragrafo"></p>
+          </div>
+          <input type="number" min="1" max="10" class="container__input" />
+          <div class="chute container__botoes">
+            <button
+              onclick="verificarChute()"
+              id="btn-chutar"
+              class="container__botao"
+            ></button>
+            <button
+              onclick="reiniciarJogo()"
+              id="reiniciar"
+              class="container__botao"
+              disabled
+            ></button>
+          </div>
+          <button
+            onclick="toggleModalCreditos()"
+            class="container__botao-creditos"
+          >
+            Créditos
+          </button>
         </div>
+        <img
+          src="./img/ia.png"
+          alt="Uma pessoa olhando para a esquerda"
+          class="container__imagem-pessoa"
+        />
+      </div>
+    </div>
+
+    <!-- Modal de Créditos -->
+    <div id="modal-creditos" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="toggleModalCreditos()">&times;</span>
+        <h2>Créditos</h2>
+        <p>Obrigado a todos que tornaram este projeto possível!</p>
+        <ul class="lista-creditos">
+          <li><strong>Adalberto Brant</strong> (Mantenedor)</li>
+          <li>Comunidade Open Source</li>
+          <li>Contribuidores do Hacktoberfest 2025</li>
+        </ul>
+      </div>
     </div>
 
     <script src="locale.js" defer></script>
     <script src="app.js" defer></script>
 
     <script>
-        function mudarIdioma(novoIdioma) {
-            idiomaAtual = novoIdioma;
-            localStorage.setItem('idioma', novoIdioma);
-            exibirMensagemInicial();
-        }
+      function mudarIdioma(novoIdioma) {
+        idiomaAtual = novoIdioma;
+        localStorage.setItem("idioma", novoIdioma);
+        exibirMensagemInicial();
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

@@ -7,7 +7,7 @@ function exibirTextoNaTela(tag, texto) {
   let campo = document.querySelector(tag);
   campo.innerHTML = texto;
 
-  if ('speechSynthesis' in window) {
+  if ("speechSynthesis" in window) {
     let utterance = new SpeechSynthesisUtterance(texto);
     // Ajusta a linguagem da voz de acordo com o idioma atual
     utterance.lang = idiomaAtual;
@@ -21,22 +21,33 @@ function exibirTextoNaTela(tag, texto) {
 exibirMensagemInicial();
 
 function verificarChute() {
-  let chute = parseInt(document.querySelector('input').value);
+  let chute = parseInt(document.querySelector("input").value);
 
   if (chute === numeroSecreto) {
-    let palavraTentativas = tentativas === 1 ?
-      (idiomaAtual === 'pt-BR' ? 'tentativa' : 'attempt') :
-      (idiomaAtual === 'pt-BR' ? 'tentativas' : 'attempts');
+    let palavraTentativas =
+      tentativas === 1
+        ? idiomaAtual === "pt-BR"
+          ? "tentativa"
+          : "attempt"
+        : idiomaAtual === "pt-BR"
+        ? "tentativas"
+        : "attempts";
 
-    exibirTextoNaTela('h1', t('acertou'));
-    exibirTextoNaTela('p', t('tentativas', {
-      tentativas: tentativas,
-      palavraTentativas
-    }));
+    exibirTextoNaTela("h1", t("acertou"));
+    exibirTextoNaTela(
+      "p",
+      t("tentativas", {
+        tentativas: tentativas,
+        palavraTentativas,
+      })
+    );
 
-    document.getElementById('reiniciar').removeAttribute('disabled');
+    document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
-    exibirTextoNaTela('p', chute > numeroSecreto ? t('numeroMenor') : t('numeroMaior'));
+    exibirTextoNaTela(
+      "p",
+      chute > numeroSecreto ? t("numeroMenor") : t("numeroMaior")
+    );
     tentativas++;
     limparCampo();
   }
@@ -44,7 +55,8 @@ function verificarChute() {
 
 function gerarNumeroAleatorio() {
   let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-  if (listaDeNumerosSorteados.length === numeroLimite) listaDeNumerosSorteados = [];
+  if (listaDeNumerosSorteados.length === numeroLimite)
+    listaDeNumerosSorteados = [];
 
   if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
     return gerarNumeroAleatorio();
@@ -55,7 +67,7 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-  document.querySelector('input').value = '';
+  document.querySelector("input").value = "";
 }
 
 function reiniciarJogo() {
@@ -63,15 +75,36 @@ function reiniciarJogo() {
   limparCampo();
   tentativas = 1;
   exibirMensagemInicial();
-  document.getElementById('reiniciar').setAttribute('disabled', true);
+  document.getElementById("reiniciar").setAttribute("disabled", true);
 }
 
 function exibirMensagemInicial() {
-  exibirTextoNaTela('h1', t('titulo'));
-  exibirTextoNaTela('p', t('escolhaNumero', {
-    limite: numeroLimite
-  }));
+  exibirTextoNaTela("h1", t("titulo"));
+  exibirTextoNaTela(
+    "p",
+    t("escolhaNumero", {
+      limite: numeroLimite,
+    })
+  );
 
-  document.getElementById('btn-chutar').innerText = t('btnChutar');
-  document.getElementById('reiniciar').innerText = t('btnNovoJogo');
+  document.getElementById("btn-chutar").innerText = t("btnChutar");
+  document.getElementById("reiniciar").innerText = t("btnNovoJogo");
 }
+// Função para alternar a visibilidade do modal de créditos
+function toggleModalCreditos() {
+  const modal = document.getElementById("modal-creditos");
+
+  if (modal.style.display === "flex") {
+    modal.style.display = "none";
+  } else {
+    modal.style.display = "flex";
+  }
+}
+
+// Fechar modal ao clicar fora do conteúdo
+window.onclick = function (event) {
+  const modal = document.getElementById("modal-creditos");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
