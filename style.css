@@ -53,6 +53,26 @@ body::before {
     padding: 3rem;
 }
 
+.container__select-idioma {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: #1875E8;
+    color: white;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.container__select-idioma option {
+    color: black;
+    font-weight: 400;
+}
+
 .container__botao {
     border-radius: 16px;
     background: #1875E8;
