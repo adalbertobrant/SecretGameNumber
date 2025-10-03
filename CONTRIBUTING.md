@@ -22,7 +22,7 @@ Para manter o projeto organizado e justo para todos, pedimos que siga os passos 
 
 1.  Vá para a nossa [lista de Issues](https://github.com/adalbertobrant/secretgamenumber/issues).
 2.  Use as etiquetas (`labels`) para filtrar, como `bug`, `feature`, `documentation`, `good first issue`, etc.
-3.  Escolha uma issue que ainda não tenha sido atribuída a ninguém.
+3.  Escolha uma issue que ainda não tenha sido designada a ninguém.
 4.  **Comente na issue** que você gostaria de trabalhar nela (ex: `"Olá! Gostaria de trabalhar nesta issue."`).
 5.  Aguarde que um mantenedor atribua a issue a você. 
 
