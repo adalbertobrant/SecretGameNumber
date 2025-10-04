@@ -47,7 +47,7 @@ Para manter o projeto organizado e justo para todos, pedimos que siga os passos 
     > ⚠️ **Regra Especial para Tutoriais de Deploy:** Se você estiver trabalhando em uma issue de tutorial de deploy, a branch **deve** ter o seu nome de usuário do GitHub.
     >
     > ```bash
-    > git checkout -b seu-nome-de-usuario-github-tutorial-issueNumber
+    > git checkout -b seu-nome-de-usuario-github
     > ```
 
 2.  Faça as alterações necessárias no código para resolver a issue.
