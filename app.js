@@ -128,3 +128,22 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// --- Parallax Effect Logic ---
+document.addEventListener('mousemove', function(e) {
+    const background = document.getElementById('background-parallax');
+    
+    // Calculate movement strength (lower number = more movement)
+    const moveStrength = 50; 
+    
+    // Get screen center coordinates
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    // Calculate mouse position offset from the center
+    const moveX = (e.clientX - centerX) / moveStrength;
+    const moveY = (e.clientY - centerY) / moveStrength;
+
+    // Apply the transformation
+    background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
