@@ -12,7 +12,9 @@ O Hacktoberfest é uma celebração anual de um mês de duração do software de
 
 Para garantir uma experiência positiva e organizada para todos, por favor, siga estas regras:
 
-1.  **Respeite o Código de Conduta:** Trate todos os contribuidores com respeito. Não toleramos qualquer tipo de assédio ou comportamento desrespeitoso.
+1.  **Respeite o Código de Conduta:** 
+    * Antes de tudo, leia e siga nosso [Código de Conduta](https://github.com/adalbertobrant/SecretGameNumber/blob/main/CODE_OF_CONDUCT.md). Esperamos que todos os contribuidores promovam um ambiente amigável e respeitoso.
+
 2.  **Escolha uma Issue:**
     * Navegue pela [aba de Issues](https://github.com/adalrtobrant/secretagamensdfsumber/issues) do projeto.
     * Escolha uma issue que lhe interesse e comente nela pedindo para ser designado(a) (`"Gostaria de trabalhar nesta issue"`).
