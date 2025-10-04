@@ -12,7 +12,7 @@ Ao completar o desafio (geralmente, fazer 4 contribuições válidas em reposit�
 
 **Datas do Evento:** 1 a 31 de Outubro de 2025.
 
-Para que sua contribuição conte para o Hacktoberfest, seu Pull Request (PR) deve ser feito em um repositório com o tópico "hacktoberfest" e ser aceito pelos mantenedores do projeto, ou seja Eu , seu amigo de todas as horas.
+Para que sua contribuição conte para o Hacktoberfest, seu Pull Request (PR) deve ser feito em um repositório com o tópico "hacktoberfest" e ser aceito pelos mantenedores do projeto.
 
 ## 📜 Como Contribuir
 
