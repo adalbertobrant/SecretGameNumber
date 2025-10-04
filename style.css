@@ -92,6 +92,17 @@ body::before {
     color: #1875E8;
 }
 
+#share-twitter{
+    /* font-size: 1.1rem; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    gap: 0.5rem;
+   
+    justify-content: center;
+   
+    
+}
+
 .container__input {
     width: 100%;
     height: 72px;

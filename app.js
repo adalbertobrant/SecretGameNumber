@@ -42,6 +42,13 @@ function verificarChute() {
       })
     );
 
+     let mensagemTweet = `I hit the secret number in ${tentativas} attempts! Play also at #SecretNumberGame.`;
+        let urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensagemTweet)}&url=https://github.com/adalbertobrant/secretgamenumber`;
+
+        let shareButton = document.getElementById('share-twitter');
+        shareButton.href = urlTwitter;
+        shareButton.style.display = 'inline-flex';
+
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
     exibirTextoNaTela(
@@ -76,6 +83,8 @@ function reiniciarJogo() {
   tentativas = 1;
   exibirMensagemInicial();
   document.getElementById("reiniciar").setAttribute("disabled", true);
+
+   document.getElementById('share-twitter').style.display = 'none';
 }
 
 function exibirMensagemInicial() {
