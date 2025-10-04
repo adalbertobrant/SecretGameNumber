@@ -14,14 +14,13 @@ Para garantir uma experiência positiva e organizada para todos, por favor, siga
 
 1.  **Respeite o Código de Conduta:** Trate todos os contribuidores com respeito. Não toleramos qualquer tipo de assédio ou comportamento desrespeitoso.
 2.  **Escolha uma Issue:**
-    * Navegue pela [aba de Issues](https://github.com/adalrtobrant/secretagamensdfsumber/issues) do projeto.
+    * Navegue pela [aba de Issues](https://github.com/adalbertobrant/secretgamenumber/issues) do projeto.
     * Escolha uma issue que lhe interesse e comente nela pedindo para ser designado(a) (`"Gostaria de trabalhar nesta issue"`).
     * Aguarde um mantenedor do projeto atribuir a issue a você antes de começar a trabalhar. Isso evita que duas pessoas trabalhem na mesma coisa.
 3.  **Crie um Fork do Repositório:**
     * Clique no botão "Fork" no canto superior direito desta página para criar uma cópia do projeto em sua própria conta do GitHub.
 4.  **Crie uma Branch para sua Contribuição:**
-    * No seu fork, crie uma nova branch para trabalhar na sua issue.
-    * Ex: `branch: "nome-de-usuario-easy-numerodoissue"`
+    * No seu fork, crie uma nova branch para trabalhar na sua issue. Use um nome descritivo.
     * **Exceção - Tutoriais de Deploy:** Para issues de tutorial de deploy, a regra é criar a branch com o seu nome de usuário do GitHub. Ex: `branch: "seu-nome-de-usuario-tutorial-numerodoissue"`.
     * Comando para criar a branch: `git checkout -b nome-da-sua-branch`
 5.  **Faça suas Alterações:**
@@ -34,13 +33,14 @@ Para garantir uma experiência positiva e organizada para todos, por favor, siga
 7.  **Aguarde a Revisão:**
     * Um mantenedor irá revisar seu PR. Pode ser que peçam algumas alterações.
     * Após a aprovação, seu PR será mesclado ao projeto principal. Parabéns pela sua contribuição!
-    * Lembre-se de dar uma estrela para o repo e divulgar o mesmo.
-    * Lembre-se são apenas 10k swags então faça logo o seu PR's.
+    * **Adicione seu nome:** Como parte da sua contribuição, não se esqueça de adicionar seu nome à lista de contribuidores no arquivo `CONTRIBUTING.md`!
+    * Lembre-se de dar uma estrela para o repositório e divulgá-lo.
+    * Lembre-se: são apenas 10k swags, então faça logo os seus PRs.
 
 ## 🛠️ Como Rodar o Projeto Localmente
 
 1.  Clone o seu fork: `git clone https://github.com/adalbertobrant/secretgamenumber.git`
-2.  Navegue até a pasta do projeto: `cd SEU-REPOSITORIO`
+2.  Navegue até a pasta do projeto: `cd secretgamenumber`
 3.  Abra o arquivo `index.html` no seu navegador de preferência.
 
 E é isso! Você está pronto para contribuir.
