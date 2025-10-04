@@ -42,12 +42,21 @@ function verificarChute() {
       })
     );
 
-     let mensagemTweet = `I hit the secret number in ${tentativas} attempts! Play also at #SecretNumberGame.`;
-        let urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensagemTweet)}&url=https://github.com/adalbertobrant/secretgamenumber`;
+    // --- Corrected, Combined Code ---
 
-        let shareButton = document.getElementById('share-twitter');
-        shareButton.href = urlTwitter;
-        shareButton.style.display = 'inline-flex';
+    // High score logic
+    let recorde = localStorage.getItem('recordeTentativas');
+    if (!recorde || tentativas < recorde) {
+        localStorage.setItem('recordeTentativas', tentativas);
+        exibirRecorde(); // Update the record display immediately
+    }
+    
+    // Twitter share logic
+    let mensagemTweet = `I hit the secret number in ${tentativas} attempts! Play also at #SecretNumberGame.`;
+    let urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensagemTweet)}&url=https://github.com/adalbertobrant/secretgamenumber`;
+    let shareButton = document.getElementById('share-twitter');
+    shareButton.href = urlTwitter;
+    shareButton.style.display = 'inline-flex';
 
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
@@ -87,6 +96,18 @@ function reiniciarJogo() {
    document.getElementById('share-twitter').style.display = 'none';
 }
 
+function exibirRecorde() {
+    let recorde = localStorage.getItem('recordeTentativas');
+    if (recorde) {
+        let palavraTentativas = recorde == 1 
+            ? (idiomaAtual === 'pt-BR' ? 'tentativa' : 'attempt')
+            : (idiomaAtual === 'pt-BR' ? 'tentativas' : 'attempts');
+
+        // This now only targets the <span> to update just the number
+        document.getElementById('record').innerHTML = `${recorde} ${palavraTentativas}`;
+    }
+}
+
 function exibirMensagemInicial() {
   exibirTextoNaTela("h1", t("titulo"));
   exibirTextoNaTela(
@@ -98,6 +119,8 @@ function exibirMensagemInicial() {
 
   document.getElementById("btn-chutar").innerText = t("btnChutar");
   document.getElementById("reiniciar").innerText = t("btnNovoJogo");
+
+  exibirRecorde();
 }
 // Função para alternar a visibilidade do modal de créditos
 function toggleModalCreditos() {

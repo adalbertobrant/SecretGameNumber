@@ -12,7 +12,7 @@ Ao completar o desafio (geralmente, fazer 4 contribuições válidas em reposit�
 
 **Datas do Evento:** 1 a 31 de Outubro de 2025.
 
-Para que sua contribuição conte para o Hacktoberfest, seu Pull Request (PR) deve ser feito em um repositório com o tópico "hacktoberfest" e ser aceito pelos mantenedores do projeto, ou seja Eu , seu amigo de todas as horas.
+Para que sua contribuição conte para o Hacktoberfest, seu Pull Request (PR) deve ser feito em um repositório com o tópico "hacktoberfest" e ser aceito pelos mantenedores do projeto.
 
 ## 📜 Como Contribuir
 
@@ -47,7 +47,7 @@ Para manter o projeto organizado e justo para todos, pedimos que siga os passos 
     > ⚠️ **Regra Especial para Tutoriais de Deploy:** Se você estiver trabalhando em uma issue de tutorial de deploy, a branch **deve** ter o seu nome de usuário do GitHub.
     >
     > ```bash
-    > git checkout -b seu-nome-de-usuario-github-tutorial-issueNumber
+    > git checkout -b seu-nome-de-usuario-github
     > ```
 
 2.  Faça as alterações necessárias no código para resolver a issue.
@@ -84,7 +84,7 @@ Agradecemos a todas as pessoas incríveis que dedicaram seu tempo e esforço par
 | Nome               | País      | GitHub                                                    | LinkedIn                                               |
 | ------------------ | --------- | --------------------------------------------------------- | ------------------------------------------------------ |
 | *Adalberto Brant*  | *Brasil*  | [Link para seu GitHub](https://github.com/adalbertobrant) | [Link para seu LinkedIn](https://linkedin.com/in/ilha) |
-|                    |           |                                                           |                                                        |
+| Keshav             | India     | [Link para seu GitHub](https://github.com/1408Keshu)      | [Link para seu LinkedIn](https://www.linkedin.com/in/keshav-chauhan-83b940296/) |
 
 ---
 
