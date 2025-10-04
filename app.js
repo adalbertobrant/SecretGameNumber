@@ -42,6 +42,12 @@ function verificarChute() {
       })
     );
 
+      let recorde = localStorage.getItem('recordeTentativas');
+        if (!recorde || tentativas < recorde) {
+            localStorage.setItem('recordeTentativas', tentativas);
+            exibirRecorde(); // Update the record display immediately
+        }
+
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
     exibirTextoNaTela(
@@ -78,6 +84,18 @@ function reiniciarJogo() {
   document.getElementById("reiniciar").setAttribute("disabled", true);
 }
 
+function exibirRecorde() {
+    let recorde = localStorage.getItem('recordeTentativas');
+    if (recorde) {
+        let palavraTentativas = recorde == 1 
+            ? (idiomaAtual === 'pt-BR' ? 'tentativa' : 'attempt')
+            : (idiomaAtual === 'pt-BR' ? 'tentativas' : 'attempts');
+
+        // This now only targets the <span> to update just the number
+        document.getElementById('record').innerHTML = `${recorde} ${palavraTentativas}`;
+    }
+}
+
 function exibirMensagemInicial() {
   exibirTextoNaTela("h1", t("titulo"));
   exibirTextoNaTela(
@@ -89,6 +107,8 @@ function exibirMensagemInicial() {
 
   document.getElementById("btn-chutar").innerText = t("btnChutar");
   document.getElementById("reiniciar").innerText = t("btnNovoJogo");
+
+  exibirRecorde();
 }
 // Função para alternar a visibilidade do modal de créditos
 function toggleModalCreditos() {

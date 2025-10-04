@@ -50,14 +50,33 @@ body::before {
 
 .container__informacoes {
     flex: 1;
-    padding: 3rem;
+    padding: 3rem ;
+
+    position: relative;
+   
+}
+
+.highscore-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #FFD700; /* Gold color */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10; /* Ensures it stays on top */
 }
 
 .container__select-idioma {
     position: absolute;
     top: 16px;
-    right: 16px;
-    padding: 8px 12px;
+    left: 16px;
+    padding: 8px 16px;
+    margin: 0 2rem;
     border-radius: 12px;
     border: none;
     background-color: #1875E8;
