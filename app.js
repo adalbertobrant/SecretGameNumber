@@ -1,14 +1,14 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let maxnumero = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
-function exibirTextoNaTela(tag, texto) {
-  let campo = document.querySelector(tag);
-  campo.innerHTML = texto;
+function exibirTextoNaTela(selector, message) {
+  let campo = document.querySelector(selector);
+  campo.innerHTML = message;
 
   if ("speechSynthesis" in window) {
-    let utterance = new SpeechSynthesisUtterance(texto);
+    let utterance = new SpeechSynthesisUtterance(message);
     // Ajusta a linguagem da voz de acordo com o idioma atual
     utterance.lang = idiomaAtual;
     utterance.rate = 1.2;
@@ -54,8 +54,10 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-  let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-  if (listaDeNumerosSorteados.length === numeroLimite)
+  let numeroEscolhido = parseInt(Math.random() * maxnumero + 1);
+  let tamanhoDaLista = listaDeNumerosSorteados.length;
+
+  if (tamanhoDaLista === maxnumero)
     listaDeNumerosSorteados = [];
 
   if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
@@ -83,7 +85,7 @@ function exibirMensagemInicial() {
   exibirTextoNaTela(
     "p",
     t("escolhaNumero", {
-      limite: numeroLimite,
+      limite: maxnumero,
     })
   );
 
