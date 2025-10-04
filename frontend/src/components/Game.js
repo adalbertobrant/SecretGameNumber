@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { toast } from "react-toastify";
+import iaImage from "../img/ia.png";
 
 const Game = () => {
   const { user, updateGameStats } = useAuth();
@@ -200,7 +201,7 @@ const Game = () => {
         </div>
 
         <img
-          src="/img/ia.png"
+          src={iaImage}
           alt="Uma pessoa olhando para a esquerda"
           className="container__imagem-pessoa"
         />
