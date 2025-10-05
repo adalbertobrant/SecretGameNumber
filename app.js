@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = parseInt(localStorage.getItem("dificuldade")) || 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -21,7 +21,7 @@ function exibirTextoNaTela(tag, texto) {
 exibirMensagemInicial();
 
 function verificarChute() {
-  let chute = parseInt(document.querySelector("input").value);
+  let chute = parseInt(document.querySelector("#input-numero").value);
 
   if (chute === numeroSecreto) {
     let palavraTentativas =
@@ -42,11 +42,11 @@ function verificarChute() {
       })
     );
 
-      let recorde = localStorage.getItem('recordeTentativas');
-        if (!recorde || tentativas < recorde) {
-            localStorage.setItem('recordeTentativas', tentativas);
-            exibirRecorde(); // Update the record display immediately
-        }
+    let recorde = localStorage.getItem("recordeTentativas");
+    if (!recorde || tentativas < recorde) {
+      localStorage.setItem("recordeTentativas", tentativas);
+      exibirRecorde(); // Update the record display immediately
+    }
 
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
@@ -73,7 +73,7 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-  document.querySelector("input").value = "";
+  document.querySelector("#input-numero").value = "";
 }
 
 function reiniciarJogo() {
@@ -85,15 +85,22 @@ function reiniciarJogo() {
 }
 
 function exibirRecorde() {
-    let recorde = localStorage.getItem('recordeTentativas');
-    if (recorde) {
-        let palavraTentativas = recorde == 1 
-            ? (idiomaAtual === 'pt-BR' ? 'tentativa' : 'attempt')
-            : (idiomaAtual === 'pt-BR' ? 'tentativas' : 'attempts');
+  let recorde = localStorage.getItem("recordeTentativas");
+  if (recorde) {
+    let palavraTentativas =
+      recorde == 1
+        ? idiomaAtual === "pt-BR"
+          ? "tentativa"
+          : "attempt"
+        : idiomaAtual === "pt-BR"
+        ? "tentativas"
+        : "attempts";
 
-        // This now only targets the <span> to update just the number
-        document.getElementById('record').innerHTML = `${recorde} ${palavraTentativas}`;
-    }
+    // This now only targets the <span> to update just the number
+    document.getElementById(
+      "record"
+    ).innerHTML = `${recorde} ${palavraTentativas}`;
+  }
 }
 
 function exibirMensagemInicial() {
@@ -108,7 +115,28 @@ function exibirMensagemInicial() {
   document.getElementById("btn-chutar").innerText = t("btnChutar");
   document.getElementById("reiniciar").innerText = t("btnNovoJogo");
 
+  // Atualizar o máximo do input
+  document.getElementById("input-numero").setAttribute("max", numeroLimite);
+
+  // Definir o valor correto no select de dificuldade
+  document.getElementById("select-dificuldade").value = numeroLimite;
+
   exibirRecorde();
+}
+
+function mudarDificuldade(novaDificuldade) {
+  numeroLimite = parseInt(novaDificuldade);
+  localStorage.setItem("dificuldade", numeroLimite);
+
+  // Reiniciar o jogo com a nova dificuldade
+  listaDeNumerosSorteados = [];
+  numeroSecreto = gerarNumeroAleatorio();
+  tentativas = 1;
+
+  // Atualizar a interface
+  exibirMensagemInicial();
+  limparCampo();
+  document.getElementById("reiniciar").setAttribute("disabled", true);
 }
 // Função para alternar a visibilidade do modal de créditos
 function toggleModalCreditos() {
