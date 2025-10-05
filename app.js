@@ -127,4 +127,14 @@ window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
-};
+}
+// Listen for any key press on the whole page
+document.addEventListener('keydown', function(event) {
+  
+  const restartButton = document.getElementById('reiniciar');
+  if (event.key === 'Enter' && !restartButton.disabled) {
+    
+    reiniciarJogo();
+  }
+});
+
