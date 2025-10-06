@@ -31,11 +31,11 @@ Para manter o projeto organizado e justo para todos, pedimos que siga os passos 
 1.  **Faça um Fork** do projeto clicando no botão "Fork" no topo da página. Isso criará uma cópia do repositório na sua conta do GitHub.
 2.  **Clone o seu fork** para a sua máquina local:
     ```bash
-    git clone [https://github.com/adalbertobrant/secretgamenumber.git](https://github.com/adalbertobrant/secretgamenumber.git)
+    git clone https://github.com/YOUR-USERNAME/secretgamenumber.git
     ```
 3.  **Adicione o repositório original** como um "remote" para manter seu fork atualizado.
     ```bash
-    git remote add upstream [https://github.com/adalbertobrant/secretgamenumber.git](https://github.com/adalbertobrant/secretgamenumber.git)
+    git remote add upstream https://github.com/adalbertobrant/secretgamenumber.git
     ```
 
 ### Passo 3: Codifique!
