@@ -42,11 +42,21 @@ function verificarChute() {
       })
     );
 
-      let recorde = localStorage.getItem('recordeTentativas');
-        if (!recorde || tentativas < recorde) {
-            localStorage.setItem('recordeTentativas', tentativas);
-            exibirRecorde(); // Update the record display immediately
-        }
+    // --- Corrected, Combined Code ---
+
+    // High score logic
+    let recorde = localStorage.getItem('recordeTentativas');
+    if (!recorde || tentativas < recorde) {
+        localStorage.setItem('recordeTentativas', tentativas);
+        exibirRecorde(); // Update the record display immediately
+    }
+    
+    // Twitter share logic
+    let mensagemTweet = `I hit the secret number in ${tentativas} attempts! Play also at #SecretNumberGame.`;
+    let urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensagemTweet)}&url=https://github.com/adalbertobrant/secretgamenumber`;
+    let shareButton = document.getElementById('share-twitter');
+    shareButton.href = urlTwitter;
+    shareButton.style.display = 'inline-flex';
 
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
@@ -84,6 +94,8 @@ function reiniciarJogo() {
   tentativas = 1;
   exibirMensagemInicial();
   document.getElementById("reiniciar").setAttribute("disabled", true);
+
+   document.getElementById('share-twitter').style.display = 'none';
 }
 
 function exibirRecorde() {
