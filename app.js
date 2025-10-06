@@ -1,14 +1,14 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let maxnumero = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
-function exibirTextoNaTela(tag, texto) {
-  let campo = document.querySelector(tag);
-  campo.innerHTML = texto;
+function exibirTextoNaTela(selector, message) {
+  let campo = document.querySelector(selector);
+  campo.innerHTML = message;
 
   if ("speechSynthesis" in window) {
-    let utterance = new SpeechSynthesisUtterance(texto);
+    let utterance = new SpeechSynthesisUtterance(message);
     // Ajusta a linguagem da voz de acordo com o idioma atual
     utterance.lang = idiomaAtual;
     utterance.rate = 1.2;
@@ -42,11 +42,21 @@ function verificarChute() {
       })
     );
 
-      let recorde = localStorage.getItem('recordeTentativas');
-        if (!recorde || tentativas < recorde) {
-            localStorage.setItem('recordeTentativas', tentativas);
-            exibirRecorde(); // Update the record display immediately
-        }
+    // --- Corrected, Combined Code ---
+
+    // High score logic
+    let recorde = localStorage.getItem('recordeTentativas');
+    if (!recorde || tentativas < recorde) {
+        localStorage.setItem('recordeTentativas', tentativas);
+        exibirRecorde(); // Update the record display immediately
+    }
+    
+    // Twitter share logic
+    let mensagemTweet = `I hit the secret number in ${tentativas} attempts! Play also at #SecretNumberGame.`;
+    let urlTwitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensagemTweet)}&url=https://github.com/adalbertobrant/secretgamenumber`;
+    let shareButton = document.getElementById('share-twitter');
+    shareButton.href = urlTwitter;
+    shareButton.style.display = 'inline-flex';
 
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
@@ -60,8 +70,10 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-  let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-  if (listaDeNumerosSorteados.length === numeroLimite)
+  let numeroEscolhido = parseInt(Math.random() * maxnumero + 1);
+  let tamanhoDaLista = listaDeNumerosSorteados.length;
+
+  if (tamanhoDaLista === maxnumero)
     listaDeNumerosSorteados = [];
 
   if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
@@ -82,6 +94,8 @@ function reiniciarJogo() {
   tentativas = 1;
   exibirMensagemInicial();
   document.getElementById("reiniciar").setAttribute("disabled", true);
+
+   document.getElementById('share-twitter').style.display = 'none';
 }
 
 function exibirRecorde() {
@@ -101,7 +115,7 @@ function exibirMensagemInicial() {
   exibirTextoNaTela(
     "p",
     t("escolhaNumero", {
-      limite: numeroLimite,
+      limite: maxnumero,
     })
   );
 
@@ -136,5 +150,23 @@ document.addEventListener('keydown', function(event) {
     
     reiniciarJogo();
   }
-});
+})
 
+// --- Parallax Effect Logic ---
+document.addEventListener('mousemove', function(e) {
+    const background = document.getElementById('background-parallax');
+    
+    // Calculate movement strength (lower number = more movement)
+    const moveStrength = 50; 
+    
+    // Get screen center coordinates
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    // Calculate mouse position offset from the center
+    const moveX = (e.clientX - centerX) / moveStrength;
+    const moveY = (e.clientY - centerY) / moveStrength;
+
+    // Apply the transformation
+    background.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
