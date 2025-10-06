@@ -144,13 +144,20 @@ window.onclick = function (event) {
 }
 // Listen for any key press on the whole page
 document.addEventListener('keydown', function(event) {
-  
-  const restartButton = document.getElementById('reiniciar');
-  if (event.key === 'Enter' && !restartButton.disabled) {
-    
-    reiniciarJogo();
+  if (event.key === 'Enter') {
+    const restartButton = document.getElementById('reiniciar');
+    const inputField = document.querySelector('input');
+
+    // If the restart button is enabled → restart the game
+    if (!restartButton.disabled) {
+      reiniciarJogo();
+    } 
+    // Otherwise, if input has focus make a guess
+    else if (document.activeElement === inputField) {
+      verificarChute();
+    }
   }
-})
+});
 
 // --- Parallax Effect Logic ---
 document.addEventListener('mousemove', function(e) {
