@@ -30,6 +30,19 @@ body::before {
   opacity: 0.4;
 }
 
+#background-parallax {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1; /* Puts it behind all other content */
+    transition: transform 0.2s ease-out; /* Smooths the movement */
+}
 .container {
   width: 80%;
   height: 80%;
@@ -198,6 +211,17 @@ body::before {
 
 .container__texto-azul {
   color: #1875e8;
+}
+
+#share-twitter{
+    /* font-size: 1.1rem; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    gap: 0.5rem;
+   
+    justify-content: center;
+   
+    
 }
 
 .container__input {
