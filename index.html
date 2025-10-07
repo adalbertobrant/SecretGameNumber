@@ -19,23 +19,42 @@
     <div class="container">
       <div class="container__conteudo">
         <div class="container__informacoes">
-            <div class="highscore-badge">
-        🏆 Record: <span id="record"></span>
-    </div>
-          <select
-            id="select-idioma"
-            class="container__select-idioma"
-            onchange="mudarIdioma(this.value)"
-          >
-            <option value="pt-BR">🇧🇷 Português</option>
-            <option value="en-US">🇺🇸 English</option>
-          </select>
+          <div class="highscore-badge">
+            🏆 Record: <span id="record"></span>
+          </div>
+
+          <div class="container__controles">
+            <select
+              id="select-idioma"
+              class="container__select-idioma"
+              onchange="mudarIdioma(this.value)"
+            >
+              <option value="pt-BR">🇧🇷 Português</option>
+              <option value="en-US">🇺🇸 English</option>
+            </select>
+
+            <select
+              id="select-dificuldade"
+              class="container__select-dificuldade"
+              onchange="mudarDificuldade(this.value)"
+            >
+              <option value="10">🟢 Fácil (1-10)</option>
+              <option value="50">🟡 Médio (1-50)</option>
+              <option value="100">🔴 Difícil (1-100)</option>
+            </select>
+          </div>
 
           <div class="container__texto">
             <h1></h1>
             <p class="texto__paragrafo"></p>
           </div>
-          <input type="number" min="1" max="10" class="container__input" />
+          <input
+            type="number"
+            min="1"
+            max="10"
+            id="input-numero"
+            class="container__input"
+          />
           <div class="chute container__botoes">
             <button
               onclick="verificarChute()"
