@@ -4,6 +4,9 @@ Olá, incrível contribuidor(a)! Ficamos muito felizes com o seu interesse em co
 
 Este guia foi criado para tornar o processo de contribuição o mais claro e simples possível. Se tiver qualquer dúvida, não hesite em abrir uma [issue](https://github.com/SEU-USUARIO/SEU-REPOSITORIO/issues) para perguntar.
 
+❤️ Código de Conduta
+A participação neste projeto é regida pelo nosso [Código de Conduta](CODE_OF_CONDUCT.md). Ao participar, você concorda em seguir seus termos. Por favor, leia o texto completo para entender quais ações são esperadas e quais comportamentos não serão tolerados. Um bom Hacktoberfest depende do respeito de todos!
+
 ## O que é o Hacktoberfest?
 
 O **Hacktoberfest** é uma celebração global do software de código aberto, que acontece durante todo o mês de outubro. O evento é organizado pela DigitalOcean e parceiros, com o objetivo de incentivar pessoas de todo o mundo a contribuírem para projetos open source.
