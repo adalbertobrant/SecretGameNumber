@@ -88,6 +88,8 @@ Agradecemos a todas as pessoas incríveis que dedicaram seu tempo e esforço par
 | ------------------ | --------- | --------------------------------------------------------- | ------------------------------------------------------ |
 | *Adalberto Brant*  | *Brasil*  | [Link para seu GitHub](https://github.com/adalbertobrant) | [Link para seu LinkedIn](https://linkedin.com/in/ilha) |
 | Keshav             | India     | [Link para seu GitHub](https://github.com/1408Keshu)      | [Link para seu LinkedIn](https://www.linkedin.com/in/keshav-chauhan-83b940296/) |
+| Navdeep Kaur       | India     | [Link para seu GitHub](https://github.com/Navdeepdhillon17)| [Link para seu LinkedIn](https://www.linkedin.com/in/navdeep-kaur-b70943277/) |
+
 
 ---
 
