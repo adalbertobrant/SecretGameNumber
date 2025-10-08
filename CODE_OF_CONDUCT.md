@@ -10,19 +10,19 @@ Comprometemo-nos a agir e interagir de maneiras que contribuam para uma comunida
 
 Exemplos de comportamentos que contribuem para um ambiente positivo para a nossa comunidade incluem:
 
-* Demonstrar empatia e bondade para com outras pessoas.
-* Respeitar opiniões, pontos de vista e experiências distintas.
-* Dar e aceitar feedback construtivo de forma educada.
-* Assumir a responsabilidade e pedir desculpas àqueles afetados por nossos erros, e aprender com a experiência.
-* Focar no que é melhor não apenas para nós como indivíduos, mas para a comunidade em geral.
+- Demonstrar empatia e bondade para com outras pessoas.
+- Respeitar opiniões, pontos de vista e experiências distintas.
+- Dar e aceitar feedback construtivo de forma educada.
+- Assumir a responsabilidade e pedir desculpas àqueles afetados por nossos erros, e aprender com a experiência.
+- Focar no que é melhor não apenas para nós como indivíduos, mas para a comunidade em geral.
 
 Exemplos de comportamentos inaceitáveis incluem:
 
-* O uso de linguagem ou imagens sexualizadas, e atenção ou avanços sexuais de qualquer tipo.
-* Comentários insultuosos/depreciativos, e ataques pessoais ou políticos.
-* Assédio público ou privado.
-* Publicar informações privadas de outras pessoas, como um endereço físico ou de e-mail, sem sua permissão explícita.
-* Outras condutas que poderiam ser razoavelmente consideradas inadequadas em um ambiente profissional.
+- O uso de linguagem ou imagens sexualizadas, e atenção ou avanços sexuais de qualquer tipo.
+- Comentários insultuosos/depreciativos, e ataques pessoais ou políticos.
+- Assédio público ou privado.
+- Publicar informações privadas de outras pessoas, como um endereço físico ou de e-mail, sem sua permissão explícita.
+- Outras condutas que poderiam ser razoavelmente consideradas inadequadas em um ambiente profissional.
 
 ## Aplicação das Regras
 
@@ -42,3 +42,10 @@ Este Código de Conduta é adaptado do [Contributor Covenant][homepage], versão
 
 [homepage]: https://www.contributor-covenant.org
 [v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+
+---
+
+## 🌍 Available Languages / Idiomas Disponíveis
+
+- [English](CODE_OF_CONDUCT-en.md) 🇺🇸
+- [Português](CODE_OF_CONDUCT.md) 🇧🇷
