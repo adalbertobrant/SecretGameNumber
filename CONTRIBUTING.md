@@ -69,7 +69,7 @@ Para manter o projeto organizado e justo para todos, pedimos que siga os passos 
 2.  Vá para a página do seu fork no GitHub. Você verá uma notificação para criar um "Pull Request".
 3.  Abra o PR em direção à branch `main` do repositório original.
 4.  Preencha o template do PR com uma descrição clara do que você fez. Vincule a issue que você resolveu usando a palavra-chave `Closes #NUMERO_DA_ISSUE`.
-5.  Aguarde a revisão. Um mantenedor irá analisar seu código e, se necessário, solicitar algumas alterações. Assim que for aprovado, seu PR será mesclado ou vai aparecer o label hacktoberfest-accepted!
+5.  Aguarde a revisão. Um mantenedor irá analisar seu código e, se necessário, solicitar algumas alterações. Assim que for aprovado, seu PR será mesclado ao projeto. Para validar sua contribuição para o Hacktoberfest, a label hacktoberfest-accepted também será adicionada.
 
 E pronto! Você fez sua contribuição. Muito obrigado! 🎉
 
